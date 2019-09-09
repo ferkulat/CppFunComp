@@ -14,7 +14,7 @@ include(CTest)
 include(warnings)
 #include(checkedcmd)
 #include(CppSkilledType)
-#include(CppResultType)
+include(CppResultType)
 
 enable_testing()
 
