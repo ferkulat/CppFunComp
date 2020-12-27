@@ -87,7 +87,7 @@ namespace cppfuncomp{
                 {
                     using CalleReturnType = decltype(callee_(std::forward<decltype(arg)>(arg)...));
 
-                    if constexpr (std::is_invocable_v<Caller, CalleReturnType>)
+                    if constexpr (std::is_invocable_v<decltype(caller_), CalleReturnType>)
                     {
                         return caller_(callee_(std::forward<decltype(arg)>(arg)...));
                     }
